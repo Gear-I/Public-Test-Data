@@ -35,7 +35,19 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic).",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysLocales": 7,
+          "MSysObjects": 87,
+          "MSysObjectsShadow": 87,
+          "MSysObjids": 7,
+          "basic": 2
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-binary",
@@ -70,7 +82,19 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic).",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysLocales": 7,
+          "MSysObjects": 87,
+          "MSysObjectsShadow": 87,
+          "MSysObjids": 8,
+          "binary": 1
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-certlog",
@@ -105,7 +129,23 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Certificate Services database."
+      "notes": "Certificate Services database.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CRLs": 2,
+          "CertificateExtensions": 92,
+          "Certificates": 11,
+          "MSysLocales": 8,
+          "MSysObjects": 210,
+          "MSysObjectsShadow": 210,
+          "MSysObjids": 39,
+          "RequestAttributes": 26,
+          "Requests": 11
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-default",
@@ -140,7 +180,19 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic).",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysLocales": 7,
+          "MSysObjects": 93,
+          "MSysObjectsShadow": 93,
+          "MSysObjids": 7,
+          "default": 1
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-index",
@@ -175,7 +227,19 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic).",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysLocales": 8,
+          "MSysObjects": 112,
+          "MSysObjectsShadow": 112,
+          "MSysObjids": 26,
+          "index": 1
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-large",
@@ -210,7 +274,19 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic).",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysLocales": 7,
+          "MSysObjects": 65068,
+          "MSysObjectsShadow": 65068,
+          "MSysObjids": 7,
+          "large": 16
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-multi",
@@ -245,7 +321,19 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic).",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysLocales": 7,
+          "MSysObjects": 97,
+          "MSysObjectsShadow": 97,
+          "MSysObjids": 8,
+          "multi": 2
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-ntds-adam",
@@ -281,7 +369,28 @@
         "dirty",
         "dissect"
       ],
-      "notes": "AD LDS (ADAM) instance database; dirty shutdown, no logs."
+      "notes": "AD LDS (ADAM) instance database; dirty shutdown, no logs.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysDefrag2": 1,
+          "MSysLocales": 9,
+          "MSysObjects": 553,
+          "MSysObjectsShadow": 553,
+          "MSysObjids": 94,
+          "datatable": 1803,
+          "hiddentable": 1,
+          "link_history_table": 0,
+          "link_table": 14,
+          "quota_rebuild_progress_table": 1,
+          "quota_table": 4,
+          "sd_table": 38,
+          "sdpropcounttable": 1,
+          "sdproptable": 0
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-ntds-fve",
@@ -316,7 +425,28 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Test DC with BitLocker (FVE) recovery information."
+      "notes": "Test DC with BitLocker (FVE) recovery information.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysDefrag2": 1,
+          "MSysLocales": 9,
+          "MSysObjects": 1699,
+          "MSysObjectsShadow": 1699,
+          "MSysObjids": 227,
+          "datatable": 3707,
+          "hiddentable": 1,
+          "link_history_table": 0,
+          "link_table": 90,
+          "quota_rebuild_progress_table": 1,
+          "quota_table": 14,
+          "sd_table": 100,
+          "sdpropcounttable": 1,
+          "sdproptable": 2
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-ntds-goad",
@@ -351,7 +481,28 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Domain controller from the public GOAD (Game of Active Directory) lab."
+      "notes": "Domain controller from the public GOAD (Game of Active Directory) lab.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysDefrag2": 1,
+          "MSysLocales": 8,
+          "MSysObjects": 1700,
+          "MSysObjectsShadow": 1700,
+          "MSysObjids": 228,
+          "datatable": 4077,
+          "hiddentable": 1,
+          "link_history_table": 0,
+          "link_table": 137,
+          "quota_rebuild_progress_table": 1,
+          "quota_table": 17,
+          "sd_table": 189,
+          "sdpropcounttable": 1,
+          "sdproptable": 1
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-srudb",
@@ -385,7 +536,26 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Small SRUM database. Windows version not documented."
+      "notes": "Small SRUM database. Windows version not documented.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysLocales": 7,
+          "MSysObjects": 161,
+          "MSysObjectsShadow": 161,
+          "MSysObjids": 28,
+          "SruDbCheckpointTable": 0,
+          "SruDbIdMapTable": 106,
+          "{17F4D97B-F26A-5E79-3A82-90040A47D13D}": 6,
+          "{841A7317-3805-518B-C2EA-AD224CB4AF84}": 3,
+          "{D10CA2FE-6FCF-4F6D-848E-B2E99266FA89}": 203,
+          "{DC3D3B50-BB90-5066-FA4E-A5F90DD8B677}": 3,
+          "{DD6636C4-8929-4683-974E-22C046A43763}": 3,
+          "{EEE2F477-0659-5C47-EF03-6D6BEFD441B3}": 2
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-text",
@@ -420,7 +590,19 @@
       "tags": [
         "dissect"
       ],
-      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic).",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysLocales": 7,
+          "MSysObjects": 102,
+          "MSysObjectsShadow": 102,
+          "MSysObjids": 8,
+          "text": 1
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-ual-current",
@@ -455,7 +637,22 @@
       "tags": [
         "dissect"
       ],
-      "notes": "User Access Logging database."
+      "notes": "User Access Logging database.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CLIENTS": 19,
+          "DNS": 12,
+          "MSysLocales": 8,
+          "MSysObjects": 467,
+          "MSysObjectsShadow": 467,
+          "MSysObjids": 16,
+          "ROLE_ACCESS": 3,
+          "VIRTUALMACHINES": 0
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "dissect-windows-edb",
@@ -490,7 +687,55 @@
         "dirty",
         "dissect"
       ],
-      "notes": "Dirty shutdown; no .log files shipped. Windows version not documented."
+      "notes": "Dirty shutdown; no .log files shipped. Windows version not documented.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CatalogManager_Properties": 0,
+          "CatalogStorageManager": 1,
+          "ChangeTracking": 115,
+          "MSysLocales": 8,
+          "MSysObjects": 894,
+          "MSysObjectsShadow": 894,
+          "MSysObjids": 49,
+          "SystemIndex_1": 14,
+          "SystemIndex_1_DATA_100": 5,
+          "SystemIndex_1_DATA_101": 5,
+          "SystemIndex_1_DATA_103": 5,
+          "SystemIndex_1_DATA_105": 5,
+          "SystemIndex_1_DATA_107": 5,
+          "SystemIndex_1_DATA_109": 5,
+          "SystemIndex_1_DATA_111": 5,
+          "SystemIndex_1_DATA_113": 5,
+          "SystemIndex_1_DATA_115": 5,
+          "SystemIndex_1_DATA_117": 5,
+          "SystemIndex_1_DATA_119": 5,
+          "SystemIndex_1_DATA_25": 11,
+          "SystemIndex_1_DATA_59": 73,
+          "SystemIndex_1_DATA_99": 8,
+          "SystemIndex_1_OCC_100": 1,
+          "SystemIndex_1_OCC_101": 1,
+          "SystemIndex_1_OCC_103": 1,
+          "SystemIndex_1_OCC_105": 1,
+          "SystemIndex_1_OCC_107": 1,
+          "SystemIndex_1_OCC_109": 1,
+          "SystemIndex_1_OCC_111": 1,
+          "SystemIndex_1_OCC_113": 1,
+          "SystemIndex_1_OCC_115": 1,
+          "SystemIndex_1_OCC_117": 1,
+          "SystemIndex_1_OCC_119": 1,
+          "SystemIndex_1_OCC_25": 1,
+          "SystemIndex_1_OCC_59": 130,
+          "SystemIndex_1_OCC_99": 1,
+          "SystemIndex_1_Properties": 281,
+          "SystemIndex_Gthr": 1184,
+          "SystemIndex_GthrAppOwner": 0,
+          "SystemIndex_GthrPth": 267,
+          "SystemIndex_PropertyStore": 1183
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-ntds",
@@ -524,7 +769,28 @@
         "dirty",
         "go-ese"
       ],
-      "notes": "Dirty shutdown; no .log files shipped. Windows version not documented."
+      "notes": "Dirty shutdown; no .log files shipped. Windows version not documented.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysDefrag2": 1,
+          "MSysLocales": 8,
+          "MSysObjects": 1665,
+          "MSysObjectsShadow": 1665,
+          "MSysObjids": 216,
+          "datatable": 3834,
+          "hiddentable": 1,
+          "link_history_table": 0,
+          "link_table": 84,
+          "quota_rebuild_progress_table": 1,
+          "quota_table": 12,
+          "sd_table": 96,
+          "sdpropcounttable": 1,
+          "sdproptable": 1
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-srudb",
@@ -557,7 +823,28 @@
       "tags": [
         "go-ese"
       ],
-      "notes": "Windows version not documented."
+      "notes": "Windows version not documented.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "MSysLocales": 7,
+          "MSysObjects": 241,
+          "MSysObjectsShadow": 241,
+          "MSysObjids": 34,
+          "SruDbCheckpointTable": 0,
+          "SruDbIdMapTable": 1141,
+          "{5C8CF1C7-7257-4F13-B223-970EF5939312}": 4038,
+          "{7ACBBAA3-D029-4BE4-9A7A-0885927F1D8F}": 44,
+          "{973F5D5C-1D90-4944-BE8E-24B94231A174}": 255,
+          "{D10CA2FE-6FCF-4F6D-848E-B2E99266FA86}": 10,
+          "{D10CA2FE-6FCF-4F6D-848E-B2E99266FA89}": 1778,
+          "{DD6636C4-8929-4683-974E-22C046A43763}": 17,
+          "{FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}": 0,
+          "{FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}LT": 1
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-ual-hyperv-pc-current",
@@ -592,7 +879,22 @@
         "dirty",
         "go-ese"
       ],
-      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'HyperV-PC'."
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'HyperV-PC'.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CLIENTS": 39,
+          "DNS": 18,
+          "MSysLocales": 8,
+          "MSysObjects": 467,
+          "MSysObjectsShadow": 467,
+          "MSysObjids": 16,
+          "ROLE_ACCESS": 3,
+          "VIRTUALMACHINES": 0
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-ual-hyperv-pc-guid",
@@ -626,7 +928,22 @@
       "tags": [
         "go-ese"
       ],
-      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'HyperV-PC'."
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'HyperV-PC'.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CLIENTS": 39,
+          "DNS": 18,
+          "MSysLocales": 8,
+          "MSysObjects": 467,
+          "MSysObjectsShadow": 467,
+          "MSysObjids": 16,
+          "ROLE_ACCESS": 3,
+          "VIRTUALMACHINES": 0
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-ual-hyperv-pc-systemidentity",
@@ -660,7 +977,21 @@
       "tags": [
         "go-ese"
       ],
-      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'HyperV-PC'."
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'HyperV-PC'.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CHAINED_DATABASES": 1,
+          "MSysLocales": 7,
+          "MSysObjects": 107,
+          "MSysObjectsShadow": 107,
+          "MSysObjids": 12,
+          "ROLE_IDS": 14,
+          "SYSTEM_IDENTITY": 6
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-ual-nondomain-user-current",
@@ -695,7 +1026,22 @@
         "dirty",
         "go-ese"
       ],
-      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'Nondomain-User'."
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'Nondomain-User'.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CLIENTS": 44,
+          "DNS": 18,
+          "MSysLocales": 8,
+          "MSysObjects": 467,
+          "MSysObjectsShadow": 467,
+          "MSysObjids": 16,
+          "ROLE_ACCESS": 3,
+          "VIRTUALMACHINES": 0
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-ual-nondomain-user-guid",
@@ -729,7 +1075,22 @@
       "tags": [
         "go-ese"
       ],
-      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'Nondomain-User'."
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'Nondomain-User'.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CLIENTS": 44,
+          "DNS": 18,
+          "MSysLocales": 8,
+          "MSysObjects": 467,
+          "MSysObjectsShadow": 467,
+          "MSysObjids": 16,
+          "ROLE_ACCESS": 3,
+          "VIRTUALMACHINES": 0
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-ual-nondomain-user-systemidentity",
@@ -763,7 +1124,21 @@
       "tags": [
         "go-ese"
       ],
-      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'Nondomain-User'."
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'Nondomain-User'.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CHAINED_DATABASES": 1,
+          "MSysLocales": 7,
+          "MSysObjects": 107,
+          "MSysObjectsShadow": 107,
+          "MSysObjids": 12,
+          "ROLE_IDS": 14,
+          "SYSTEM_IDENTITY": 6
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-webcache",
@@ -797,7 +1172,21 @@
         "dirty",
         "go-ese"
       ],
-      "notes": "Dirty shutdown; no .log files shipped. Windows version not documented."
+      "notes": "Dirty shutdown; no .log files shipped. Windows version not documented.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "Container_1": 1,
+          "Container_2": 2,
+          "Containers": 2,
+          "MSysLocales": 8,
+          "MSysObjects": 143,
+          "MSysObjectsShadow": 143,
+          "MSysObjids": 10
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     },
     {
       "id": "go-ese-windows-edb",
@@ -830,7 +1219,52 @@
       "tags": [
         "go-ese"
       ],
-      "notes": "Windows version not documented."
+      "notes": "Windows version not documented.",
+      "reference": {
+        "tool": "dissect.database 1.1",
+        "generated": "2026-11-27",
+        "tables": {
+          "CatalogManager_Properties": 0,
+          "CatalogStorageManager": 1,
+          "ChangeTracking": 816,
+          "MSysLocales": 8,
+          "MSysObjects": 883,
+          "MSysObjectsShadow": 883,
+          "MSysObjids": 45,
+          "SystemIndex_1": 12,
+          "SystemIndex_1_DATA_10": 5,
+          "SystemIndex_1_DATA_11": 5,
+          "SystemIndex_1_DATA_12": 5,
+          "SystemIndex_1_DATA_13": 10,
+          "SystemIndex_1_DATA_14": 2,
+          "SystemIndex_1_DATA_15": 5,
+          "SystemIndex_1_DATA_16": 0,
+          "SystemIndex_1_DATA_2": 5,
+          "SystemIndex_1_DATA_3": 6,
+          "SystemIndex_1_DATA_7": 5,
+          "SystemIndex_1_DATA_8": 5,
+          "SystemIndex_1_DATA_9": 2,
+          "SystemIndex_1_OCC_1": 1,
+          "SystemIndex_1_OCC_10": 1,
+          "SystemIndex_1_OCC_11": 1,
+          "SystemIndex_1_OCC_12": 1,
+          "SystemIndex_1_OCC_13": 1,
+          "SystemIndex_1_OCC_14": 1,
+          "SystemIndex_1_OCC_15": 1,
+          "SystemIndex_1_OCC_16": 0,
+          "SystemIndex_1_OCC_2": 1,
+          "SystemIndex_1_OCC_3": 1,
+          "SystemIndex_1_OCC_7": 1,
+          "SystemIndex_1_OCC_8": 1,
+          "SystemIndex_1_OCC_9": 1,
+          "SystemIndex_1_Properties": 52,
+          "SystemIndex_Gthr": 935,
+          "SystemIndex_GthrAppOwner": 0,
+          "SystemIndex_GthrPth": 174,
+          "SystemIndex_PropertyStore": 930
+        },
+        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+      }
     }
   ]
 }

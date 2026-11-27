@@ -25,7 +25,8 @@ ese/
 ├── manifest.schema.json      JSON Schema for manifest.json
 ├── .gitignore
 ├── tools/
-│   └── add_to_manifest.py    hash + read header + add/update a manifest entry
+│   ├── add_to_manifest.py    hash + read header + add/update a manifest entry
+│   └── reference_counts.py   fill reference row counts with dissect.database
 ├── files/
 │   ├── redist/<id>/          small, redistributable databases (committed, gzip them)
 │   └── local/<id>/           non-redistributable or large (git-ignored)
@@ -130,9 +131,20 @@ image gives you `Windows.edb` and possibly WebCache instead.)
    `--image` hashes the whole image (slow); use `--image-sha256` to paste a
    published hash instead. Run with only `--id` and the changed options to
    update an entry later; other fields are kept.
-4. Produce reference row counts with a separate tool, save them as
-   `{"Table": rows, …}` and attach them:
-   `--reference-json work/leakage/counts.json --reference-tool "esedbexport 20240420"`.
+4. Produce reference row counts with an independent tool. With dissect.database
+   (installed in the git-ignored `work/venv`):
+
+   ```powershell
+   python -m venv work/venv
+   work/venv/Scripts/python -m pip install dissect.database
+   work/venv/Scripts/python tools/reference_counts.py --id cfreds-leakage-pc-windows-edb
+   ```
+
+   It counts the leaf nodes of each table's data tree (records as stored, no
+   log replay), and leaves out tables it cannot read, naming them in
+   `reference.notes`. For another tool (e.g. esedbexport), save
+   `{"Table": rows, …}` and attach it with
+   `--reference-json counts.json --reference-tool "esedbexport 20240420"`.
 5. Commit `manifest.json` (and the `.gz` under `files/redist/` if redistributable).
 
 `--header-only FILE` prints the header without touching the manifest;
@@ -192,7 +204,12 @@ raw downloads kept under `images/`):
 
 Coverage: format 0x620 with revisions 0x14, 0x6e and 0xb4. Pages are 4, 8 and
 32 KiB. Six databases are dirty, but none has its logs. No Windows versions are
-documented, and there are no `reference` row counts yet.
+documented.
+
+Reference row counts: generated 2026-11-27 with `tools/reference_counts.py`
+(dissect.database 1.1) for all 24 entries; every table was readable. The
+dissect.database samples are dissect's own test files, so for them dissect is not
+an independent reference; cross-check with esedbexport where it matters.
 
 To re-fetch on another machine, download the same paths at the same commits and
 run `python tools/add_to_manifest.py --verify`.
