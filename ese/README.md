@@ -210,7 +210,7 @@ documented.
 
 Reference row counts: generated 2026-11-27 with `tools/reference_counts.py`
 (dissect.database 1.1) for all 24 entries; every table was readable. The
-dissect.database samples are dissect's own test files; they were cross-checked
+All 24 entries (including dissect's own test files) were cross-checked
 with libesedb 20240420 (esedbexport + pyesedb, `tools/count_libesedb.sh`) and agree
 on every table, see `reports/2026-11-27-dissect-vs-libesedb.md`. Counts are live
 rows (deleted-flagged nodes excluded, as libesedb does).

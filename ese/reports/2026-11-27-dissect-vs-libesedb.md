@@ -1,4 +1,4 @@
-# Cross-check: dissect.database vs libesedb on the dissect.database samples
+# Cross-check: dissect.database vs libesedb on all corpus samples
 
 Date: 2026-11-27
 
@@ -56,6 +56,31 @@ cannot export.
    embedded newlines. None occurred here, since the API and export counts
    matched everywhere else.
 
-## Not covered
+## go-ese samples (same tools, same day)
 
-The 10 go-ese entries were not cross-checked with libesedb.
+All 10 `go-ese-*` entries also have the same count for every table in dissect,
+the libesedb API and esedbexport (exit 0 for all).
+
+| Entry | Tables | Live rows |
+|---|---:|---:|
+| go-ese-ntds | 14 | 7584 |
+| go-ese-srudb | 14 | 7807 |
+| go-ese-ual-hyperv-pc-current | 8 | 1018 |
+| go-ese-ual-hyperv-pc-guid | 8 | 1018 |
+| go-ese-ual-hyperv-pc-systemidentity | 7 | 254 |
+| go-ese-ual-nondomain-user-current | 8 | 1023 |
+| go-ese-ual-nondomain-user-guid | 8 | 1023 |
+| go-ese-ual-nondomain-user-systemidentity | 7 | 254 |
+| go-ese-webcache | 7 | 309 |
+| go-ese-windows-edb | 38 | 4786 |
+
+This includes the two go-ese tables that were corrected when deleted-flagged
+nodes stopped being counted (`go-ese-ntds` `sdproptable` = 0, `go-ese-windows-edb`
+`MSysObjects`/`MSysObjectsShadow` = 873). libesedb gives the same values, which
+confirms the live-rows rule.
+
+## Coverage
+
+All 24 manifest entries agree between dissect.database 1.1 and libesedb
+20240420. The only disagreement left is that esedbexport cannot export table
+`large` in `dissect-large`.
