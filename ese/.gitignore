@@ -1,0 +1,46 @@
+# ESE corpus: keep databases out of git unless they are small AND redistributable.
+#
+#   files/redist/<id>/   committed  (synthetic or explicitly redistributable, keep each file small; gzip it)
+#   files/local/<id>/    ignored    (non-redistributable terms, or too large)
+#   images/              ignored    (downloaded source images / archives)
+#   work/                ignored    (scratch: mounted images, esentutl copies, exports)
+
+/files/local/
+/images/
+/work/
+
+# Safety net: raw databases, logs and images are ignored everywhere ...
+*.edb
+*.dat
+*.dit
+*.mdb
+*.stm
+*.log
+*.jrs
+*.chk
+*.jfm
+*.pat
+*.E01
+*.e01
+*.Ex01
+*.raw
+*.dd
+*.vmdk
+*.vhd
+*.vhdx
+*.7z
+*.zip
+
+# ... except under files/redist/, where small redistributable databases are
+# committed (prefer the .gz form, e.g. SRUDB.dat.gz).
+!/files/redist/**/*.edb
+!/files/redist/**/*.dat
+!/files/redist/**/*.dit
+!/files/redist/**/*.mdb
+!/files/redist/**/*.log
+!/files/redist/**/*.jrs
+!/files/redist/**/*.chk
+!/files/redist/**/*.jfm
+
+__pycache__/
+*.pyc

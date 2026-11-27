@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Gear-I/Public-Test-Data/ese/manifest.schema.json",
+  "title": "ESE test corpus manifest",
+  "description": "One entry per ESE database in the corpus. Paths are relative to the folder that holds manifest.json (the corpus root, e.g. the value of CRUSH_ESE_CORPUS).",
+  "type": "object",
+  "required": ["manifest_version", "databases"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "manifest_version": { "const": 1 },
+    "databases": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/database" }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "database": {
+      "type": "object",
+      "required": ["id", "artifact_type", "file", "source", "header", "redistributable"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "Stable slug, unique in the manifest. Also the folder name under files/redist/ or files/local/.",
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "artifact_type": {
+          "enum": ["SRUDB.dat", "WebCacheV01.dat", "Windows.edb", "ntds.dit", "other"]
+        },
+        "artifact_detail": {
+          "description": "Free text when artifact_type is 'other' (e.g. 'UAL Current.mdb', 'CertLog.edb', 'Exchange priv1.edb', 'synthetic AllTypes').",
+          "type": "string"
+        },
+        "redistributable": {
+          "description": "true only if the source terms allow redistribution. false => the file lives under files/local/ and is git-ignored; only this manifest entry is committed.",
+          "type": "boolean"
+        },
+        "file": {
+          "type": "object",
+          "required": ["path", "sha256", "size"],
+          "additionalProperties": false,
+          "properties": {
+            "path": { "description": "Relative to the corpus root, forward slashes.", "type": "string" },
+            "sha256": { "$ref": "#/$defs/sha256", "description": "SHA-256 of the extracted database exactly as stored at 'path' (not of a .gz wrapper)." },
+            "size": { "type": "integer", "minimum": 0 },
+            "compressed_as": {
+              "description": "Set when the file at 'path' is stored compressed; sha256/size are then of the decompressed bytes.",
+              "enum": ["gzip"]
+            },
+            "sidecars": {
+              "description": "Transaction logs (.log/.jrs), checkpoint (.chk), flush map (.jfm) etc. extracted alongside the database.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["path", "sha256", "size"],
+                "additionalProperties": false,
+                "properties": {
+                  "path": { "type": "string" },
+                  "sha256": { "$ref": "#/$defs/sha256" },
+                  "size": { "type": "integer", "minimum": 0 }
+                }
+              }
+            }
+          }
+        },
+        "source": {
+          "type": "object",
+          "required": ["name", "licence"],
+          "additionalProperties": false,
+          "properties": {
+            "name": { "description": "e.g. 'NIST CFReDS Data Leakage Case', 'synthetic (esent.dll)'.", "type": "string" },
+            "url": { "type": "string" },
+            "licence": { "description": "SPDX id where one exists (CC0-1.0, Apache-2.0, ...) or a short description of the terms.", "type": "string" },
+            "terms_url": { "type": "string" },
+            "image_name": { "description": "File name of the source image/archive (e.g. 'cfreds_2015_data_leakage_pc.E01').", "type": "string" },
+            "image_sha256": { "oneOf": [{ "$ref": "#/$defs/sha256" }, { "type": "null" }] },
+            "path_in_image": { "description": "Path of the database inside the image, e.g. 'C:/Windows/System32/sru/SRUDB.dat'.", "type": "string" },
+            "retrieved": { "description": "ISO date the source was downloaded or the file was generated.", "type": "string" }
+          }
+        },
+        "windows_version": { "description": "e.g. 'Windows 7 SP1 x64', 'Windows 10 21H2 (19044)', 'Windows Server 2019'.", "type": "string" },
+        "header": {
+          "description": "Fields read from the ESE file header (page 0) by tools/add_to_manifest.py.",
+          "type": "object",
+          "required": ["signature_ok", "file_type", "format_version", "format_revision", "page_size", "db_state"],
+          "additionalProperties": false,
+          "properties": {
+            "signature_ok": { "description": "bytes ef cd ab 89 at offset 4", "type": "boolean" },
+            "file_type": { "description": "uint32 at offset 12: 0 = database, 1 = streaming file", "type": "integer" },
+            "format_version": { "description": "uint32 at offset 8, hex string, e.g. '0x620'", "type": "string" },
+            "format_revision": { "description": "uint32 at offset 232, hex string, e.g. '0x14'", "type": "string" },
+            "page_size": { "description": "uint32 at offset 236; 0 in very old files means 4096", "type": "integer" },
+            "page_size_raw": { "type": "integer" },
+            "db_state": { "description": "uint32 at offset 52", "type": "integer" },
+            "db_state_name": { "enum": ["JustCreated", "DirtyShutdown", "CleanShutdown", "BeingConverted", "ForceDetach", "unknown"] }
+          }
+        },
+        "reference": {
+          "description": "Expected results from an independent reference tool, run separately. Consumed by the opt-in Crush corpus test.",
+          "type": "object",
+          "required": ["tool", "tables"],
+          "additionalProperties": false,
+          "properties": {
+            "tool": { "description": "e.g. 'esedbexport 20240420', 'dissect.database 1.x'", "type": "string" },
+            "generated": { "type": "string" },
+            "tables": {
+              "description": "table name -> row count",
+              "type": "object",
+              "additionalProperties": { "type": "integer", "minimum": 0 }
+            },
+            "notes": { "type": "string" }
+          }
+        },
+        "tags": {
+          "description": "Free-form labels, e.g. 'dirty', 'has-logs', 'synthetic', 'legacy-4k', 'large-pages'.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}
