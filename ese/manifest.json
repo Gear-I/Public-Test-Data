@@ -46,7 +46,7 @@
           "MSysObjids": 7,
           "basic": 2
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -93,7 +93,7 @@
           "MSysObjids": 8,
           "binary": 1
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -144,7 +144,7 @@
           "RequestAttributes": 26,
           "Requests": 11
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -191,7 +191,7 @@
           "MSysObjids": 7,
           "default": 1
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -238,7 +238,7 @@
           "MSysObjids": 26,
           "index": 1
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -285,7 +285,7 @@
           "MSysObjids": 7,
           "large": 16
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -332,7 +332,7 @@
           "MSysObjids": 8,
           "multi": 2
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -389,7 +389,7 @@
           "sdpropcounttable": 1,
           "sdproptable": 0
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -443,9 +443,9 @@
           "quota_table": 14,
           "sd_table": 100,
           "sdpropcounttable": 1,
-          "sdproptable": 2
+          "sdproptable": 0
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay). Deleted-flagged nodes not counted: sdproptable=2."
       }
     },
     {
@@ -499,9 +499,9 @@
           "quota_table": 17,
           "sd_table": 189,
           "sdpropcounttable": 1,
-          "sdproptable": 1
+          "sdproptable": 0
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay). Deleted-flagged nodes not counted: sdproptable=1."
       }
     },
     {
@@ -554,7 +554,7 @@
           "{DD6636C4-8929-4683-974E-22C046A43763}": 3,
           "{EEE2F477-0659-5C47-EF03-6D6BEFD441B3}": 2
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -601,7 +601,7 @@
           "MSysObjids": 8,
           "text": 1
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -651,7 +651,7 @@
           "ROLE_ACCESS": 3,
           "VIRTUALMACHINES": 0
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -732,9 +732,9 @@
           "SystemIndex_Gthr": 1184,
           "SystemIndex_GthrAppOwner": 0,
           "SystemIndex_GthrPth": 267,
-          "SystemIndex_PropertyStore": 1183
+          "SystemIndex_PropertyStore": 1182
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay). Deleted-flagged nodes not counted: SystemIndex_PropertyStore=1."
       }
     },
     {
@@ -787,9 +787,9 @@
           "quota_table": 12,
           "sd_table": 96,
           "sdpropcounttable": 1,
-          "sdproptable": 1
+          "sdproptable": 0
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay). Deleted-flagged nodes not counted: sdproptable=1."
       }
     },
     {
@@ -843,7 +843,7 @@
           "{FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}": 0,
           "{FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}LT": 1
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -893,7 +893,7 @@
           "ROLE_ACCESS": 3,
           "VIRTUALMACHINES": 0
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -942,7 +942,7 @@
           "ROLE_ACCESS": 3,
           "VIRTUALMACHINES": 0
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -990,7 +990,7 @@
           "ROLE_IDS": 14,
           "SYSTEM_IDENTITY": 6
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -1040,7 +1040,7 @@
           "ROLE_ACCESS": 3,
           "VIRTUALMACHINES": 0
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -1089,7 +1089,7 @@
           "ROLE_ACCESS": 3,
           "VIRTUALMACHINES": 0
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -1137,7 +1137,7 @@
           "ROLE_IDS": 14,
           "SYSTEM_IDENTITY": 6
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -1185,7 +1185,7 @@
           "MSysObjectsShadow": 143,
           "MSysObjids": 10
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay)."
       }
     },
     {
@@ -1228,8 +1228,8 @@
           "CatalogStorageManager": 1,
           "ChangeTracking": 816,
           "MSysLocales": 8,
-          "MSysObjects": 883,
-          "MSysObjectsShadow": 883,
+          "MSysObjects": 873,
+          "MSysObjectsShadow": 873,
           "MSysObjids": 45,
           "SystemIndex_1": 12,
           "SystemIndex_1_DATA_10": 5,
@@ -1263,7 +1263,7 @@
           "SystemIndex_GthrPth": 174,
           "SystemIndex_PropertyStore": 930
         },
-        "notes": "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        "notes": "Row counts = leaf nodes of each table's data tree without the fNDDeleted flag (live records as stored, no log replay). Deleted-flagged nodes not counted: MSysObjects=10, MSysObjectsShadow=10, MSysObjids=1."
       }
     }
   ]

@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from add_to_manifest import CORPUS_ROOT, DEFAULT_MANIFEST, load_manifest, save_manifest  # noqa: E402
 
 from dissect.database.ese import ESE  # noqa: E402
+from dissect.database.ese.c_ese import TAG_FLAG  # noqa: E402
 
 
 def open_bytes(path: Path) -> io.BytesIO:
@@ -38,16 +39,30 @@ def open_bytes(path: Path) -> io.BytesIO:
     return io.BytesIO(path.read_bytes())
 
 
-def count_tables(path: Path) -> tuple[dict[str, int], list[str]]:
+def count_tables(path: Path) -> tuple[dict[str, int], dict[str, int], list[str]]:
+    """Live rows per table, deleted-flagged leaf nodes per table, unreadable tables.
+
+    Leaf nodes with the fNDDeleted tag flag are records deleted but not yet
+    cleaned up. libesedb/esedbexport skip them, so they are not counted as rows.
+    """
     db = ESE(open_bytes(path))
     counts: dict[str, int] = {}
+    deleted: dict[str, int] = {}
     errors: list[str] = []
     for table in db.tables():
         try:
-            counts[table.name] = sum(1 for _ in table.root.iter_leaf_nodes())
+            live = dead = 0
+            for node in table.root.iter_leaf_nodes():
+                if node.tag.flags & TAG_FLAG.Deleted:
+                    dead += 1
+                else:
+                    live += 1
+            counts[table.name] = live
+            if dead:
+                deleted[table.name] = dead
         except Exception as e:  # noqa: BLE001 - record and continue
             errors.append(f"{table.name}: {type(e).__name__}: {e}"[:200])
-    return dict(sorted(counts.items())), errors
+    return dict(sorted(counts.items())), deleted, errors
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -69,13 +84,17 @@ def main(argv: list[str] | None = None) -> int:
             print(f"skip     {entry['id']}: file not present")
             continue
         try:
-            counts, errors = count_tables(path)
+            counts, deleted, errors = count_tables(path)
         except Exception as e:  # noqa: BLE001
             failed += 1
             print(f"FAILED   {entry['id']}: {type(e).__name__}: {e}")
             continue
         ref = {"tool": tool, "generated": today, "tables": counts}
-        notes = "Row counts = leaf nodes of each table's data tree (records as stored, no log replay)."
+        notes = ("Row counts = leaf nodes of each table's data tree without the fNDDeleted flag "
+                 "(live records as stored, no log replay).")
+        if deleted:
+            notes += " Deleted-flagged nodes not counted: " + ", ".join(
+                f"{k}={v}" for k, v in sorted(deleted.items())) + "."
         if errors:
             notes += " Tables dissect could not read (omitted): " + "; ".join(errors)
         ref["notes"] = notes

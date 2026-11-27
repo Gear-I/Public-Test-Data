@@ -26,7 +26,9 @@ ese/
 ├── .gitignore
 ├── tools/
 │   ├── add_to_manifest.py    hash + read header + add/update a manifest entry
-│   └── reference_counts.py   fill reference row counts with dissect.database
+│   ├── reference_counts.py   fill reference row counts with dissect.database
+│   └── count_libesedb.sh     cross-check counts with libesedb (run in WSL/Linux)
+├── reports/                  cross-check results
 ├── files/
 │   ├── redist/<id>/          small, redistributable databases (committed, gzip them)
 │   └── local/<id>/           non-redistributable or large (git-ignored)
@@ -208,8 +210,10 @@ documented.
 
 Reference row counts: generated 2026-11-27 with `tools/reference_counts.py`
 (dissect.database 1.1) for all 24 entries; every table was readable. The
-dissect.database samples are dissect's own test files, so for them dissect is not
-an independent reference; cross-check with esedbexport where it matters.
+dissect.database samples are dissect's own test files; they were cross-checked
+with libesedb 20240420 (esedbexport + pyesedb, `tools/count_libesedb.sh`) and agree
+on every table, see `reports/2026-11-27-dissect-vs-libesedb.md`. Counts are live
+rows (deleted-flagged nodes excluded, as libesedb does).
 
 To re-fetch on another machine, download the same paths at the same commits and
 run `python tools/add_to_manifest.py --verify`.
