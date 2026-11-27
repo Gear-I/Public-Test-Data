@@ -177,8 +177,28 @@ left for you to download.
 | **fox-it/dissect.database `tests/_data/ese`** ([repo](https://github.com/fox-it/dissect.database), successor of dissect.esedb) | Same synthetic set plus `ntds/{adam,fve,goad,large}/ntds.dit.gz`, `tools/CertLog.edb.gz`, `tools/Current.mdb.gz`, `tools/SRUDB.dat.gz` | ntds.dit (AD LDS, BitLocker keys, GOAD lab DC), CertLog.edb (AD CS) | stored in Git LFS (clone with `git lfs pull`) | Apache-2.0; GOAD is a public lab, so `goad/ntds.dit` is lab data → still **local** by default |
 | **libyal/libesedb** ([repo](https://github.com/libyal/libesedb)) | No sample databases in the repo; the reference tool (`esedbexport`, `esedbinfo`) | – | – | LGPL-3.0; use as the reference tool |
 
-Small open-source samples (go-ese, KStrike, dissect) are only a few MB and
-could be fetched with `git clone --depth 1` / `gh api` once you approve it.
+### Current contents (2026-11-27)
+
+24 entries, all `redistributable: false` (files under `files/local/`, git-ignored;
+raw downloads kept under `images/`):
+
+* **Velocidex/go-ese** @ `458e8ab` (10 files, fetched from raw.githubusercontent.com):
+  SRUDB.dat, WebCacheV01.dat (dirty), Windows.edb, ntds.dit (dirty), six UAL `.mdb`
+  (two `Current.mdb` dirty).
+* **fox-it/dissect.database** @ `c6fedbb` (14 files, Git LFS objects checked against
+  the LFS pointer SHA-256): seven synthetic `*.edb`, Windows.edb (dirty), ntds.dit
+  ×3 (AD LDS dirty, FVE, GOAD), CertLog.edb, UAL Current.mdb, SRUDB.dat.
+  Skipped: `ntds/large/ntds.dit.gz` (127 MB compressed).
+
+Coverage: format 0x620 with revisions 0x14, 0x6e and 0xb4. Pages are 4, 8 and
+32 KiB. Six databases are dirty, but none has its logs. No Windows versions are
+documented, and there are no `reference` row counts yet.
+
+To re-fetch on another machine, download the same paths at the same commits and
+run `python tools/add_to_manifest.py --verify`.
+
+KStrike and Velociraptor UAL samples were not fetched (go-ese already carries the
+KStrike set).
 
 ## Making synthetic databases
 

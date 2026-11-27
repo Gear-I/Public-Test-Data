@@ -1,5 +1,836 @@
 {
   "$schema": "./manifest.schema.json",
   "manifest_version": 1,
-  "databases": []
+  "databases": [
+    {
+      "id": "dissect-basic",
+      "artifact_type": "other",
+      "artifact_detail": "dissect synthetic test DB (basic.edb)",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-basic/basic.edb.gz",
+        "sha256": "39f0370d0149288c758e818f8857aff9abc2a6d605f6dbf498c43390eb3fd711",
+        "size": 1048576,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/basic.edb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+    },
+    {
+      "id": "dissect-binary",
+      "artifact_type": "other",
+      "artifact_detail": "dissect synthetic test DB (binary.edb)",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-binary/binary.edb.gz",
+        "sha256": "98a8a0e13c7bfd1e48346c9d8b2f5b4c7fa671ae658ab16e6625f31e695413ab",
+        "size": 1048576,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/binary.edb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+    },
+    {
+      "id": "dissect-certlog",
+      "artifact_type": "other",
+      "artifact_detail": "AD CS CertLog.edb",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-certlog/CertLog.edb.gz",
+        "sha256": "a30c8bdacbedb9bc09eaae1196cdf326580eaa0290112a9311ab5e32c2152c98",
+        "size": 1048576,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/tools/CertLog.edb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Certificate Services database."
+    },
+    {
+      "id": "dissect-default",
+      "artifact_type": "other",
+      "artifact_detail": "dissect synthetic test DB (default.edb)",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-default/default.edb.gz",
+        "sha256": "d4d1b6da4669951b928bd10b1fed0b61c8e3fbb3c1c893c958b58cb33efc2093",
+        "size": 1048576,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/default.edb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+    },
+    {
+      "id": "dissect-index",
+      "artifact_type": "other",
+      "artifact_detail": "dissect synthetic test DB (index.edb)",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-index/index.edb.gz",
+        "sha256": "370b4ae5d65766a3592e136e52783727e8f1a13d5e5a811b67213301c9471840",
+        "size": 1048576,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/index.edb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+    },
+    {
+      "id": "dissect-large",
+      "artifact_type": "other",
+      "artifact_detail": "dissect synthetic test DB (large.edb)",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-large/large.edb.gz",
+        "sha256": "438e4a3f50dcdfb9714ea0943346264c10ea87e6ea0f320ed3895e131fc8795e",
+        "size": 25165824,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/large.edb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 32768,
+        "page_size_raw": 32768,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+    },
+    {
+      "id": "dissect-multi",
+      "artifact_type": "other",
+      "artifact_detail": "dissect synthetic test DB (multi.edb)",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-multi/multi.edb.gz",
+        "sha256": "a6e74cc87f325173a85956dcb74a7643d66bdb25e22f3cc1d2ad1b7a4ec9b374",
+        "size": 1048576,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/multi.edb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+    },
+    {
+      "id": "dissect-ntds-adam",
+      "artifact_type": "ntds.dit",
+      "artifact_detail": "AD LDS adamntds.dit",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-ntds-adam/adamntds.dit.gz",
+        "sha256": "1e62528fc29633362beabeb5a68c838a4a690a43b55c06d96ecc7d3e85e46167",
+        "size": 12582912,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/ntds/adam/adamntds.dit.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 8192,
+        "page_size_raw": 8192,
+        "db_state": 2,
+        "db_state_name": "DirtyShutdown"
+      },
+      "tags": [
+        "dirty",
+        "dissect"
+      ],
+      "notes": "AD LDS (ADAM) instance database; dirty shutdown, no logs."
+    },
+    {
+      "id": "dissect-ntds-fve",
+      "artifact_type": "ntds.dit",
+      "artifact_detail": "DC with BitLocker recovery keys",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-ntds-fve/ntds.dit.gz",
+        "sha256": "ed3bfd0fe9baca4e07a3187d840f29bc91f019e8c51dc6406600a9ab2bc860a3",
+        "size": 16777216,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/ntds/fve/ntds.dit.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 8192,
+        "page_size_raw": 8192,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Test DC with BitLocker (FVE) recovery information."
+    },
+    {
+      "id": "dissect-ntds-goad",
+      "artifact_type": "ntds.dit",
+      "artifact_detail": "GOAD lab DC",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-ntds-goad/ntds.dit.gz",
+        "sha256": "39bb6acdae70242346bef03e902ef5d669c884087514a45f0e6a8bd2cd7c3134",
+        "size": 16777216,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/ntds/goad/ntds.dit.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 8192,
+        "page_size_raw": 8192,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Domain controller from the public GOAD (Game of Active Directory) lab."
+    },
+    {
+      "id": "dissect-srudb",
+      "artifact_type": "SRUDB.dat",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-srudb/SRUDB.dat.gz",
+        "sha256": "cabe0aecd27b751e03aed4c226615059736657e2b554b476220d60c8245a7adc",
+        "size": 655360,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/tools/SRUDB.dat.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Small SRUM database. Windows version not documented."
+    },
+    {
+      "id": "dissect-text",
+      "artifact_type": "other",
+      "artifact_detail": "dissect synthetic test DB (text.edb)",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-text/text.edb.gz",
+        "sha256": "111232ac201e46f912c8c1f5c4e0eb9bfde58cdc199b22ef8350931d383a22b4",
+        "size": 1048576,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/text.edb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "Small database made by the dissect authors for their unit tests (looks synthetic)."
+    },
+    {
+      "id": "dissect-ual-current",
+      "artifact_type": "other",
+      "artifact_detail": "UAL Current.mdb",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-ual-current/Current.mdb.gz",
+        "sha256": "e3873ec077c0cd9018f1f1c996b12216c1e63ee19ed710039a01fce0ce69d531",
+        "size": 1048576,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/tools/Current.mdb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "dissect"
+      ],
+      "notes": "User Access Logging database."
+    },
+    {
+      "id": "dissect-windows-edb",
+      "artifact_type": "Windows.edb",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/dissect-windows-edb/Windows.edb.gz",
+        "sha256": "10dd5fc05c2d19aa1fa4a705142e413fc5a4af17ae8e5e4909164262f9de7c66",
+        "size": 33554432,
+        "compressed_as": "gzip"
+      },
+      "source": {
+        "name": "fox-it/dissect.database test data",
+        "url": "https://github.com/fox-it/dissect.database/tree/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/tests/_data/ese",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/fox-it/dissect.database/blob/c6fedbb0e1d878e1fb499f5458275b0e474aa95b/LICENSE",
+        "image_name": "fox-it/dissect.database@c6fedbb0e1d878e1fb499f5458275b0e474aa95b",
+        "path_in_image": "tests/_data/ese/Windows.edb.gz",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x6e",
+        "page_size": 32768,
+        "page_size_raw": 32768,
+        "db_state": 2,
+        "db_state_name": "DirtyShutdown"
+      },
+      "tags": [
+        "dirty",
+        "dissect"
+      ],
+      "notes": "Dirty shutdown; no .log files shipped. Windows version not documented."
+    },
+    {
+      "id": "go-ese-ntds",
+      "artifact_type": "ntds.dit",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-ntds/ntds.dit",
+        "sha256": "f52d58444ad2968cdf1781ed737a16637e40923732f37327bb2d7e7cc2736886",
+        "size": 20987904
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/Samples/ntds.dit",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 8192,
+        "page_size_raw": 8192,
+        "db_state": 2,
+        "db_state_name": "DirtyShutdown"
+      },
+      "tags": [
+        "dirty",
+        "go-ese"
+      ],
+      "notes": "Dirty shutdown; no .log files shipped. Windows version not documented."
+    },
+    {
+      "id": "go-ese-srudb",
+      "artifact_type": "SRUDB.dat",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-srudb/SRUDB.dat",
+        "sha256": "def113048c6c940bbcafad576a28f90444e53a9f8cec498067d128caacf2ac90",
+        "size": 3276800
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/SRUM/SRUDB.dat",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x6e",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "go-ese"
+      ],
+      "notes": "Windows version not documented."
+    },
+    {
+      "id": "go-ese-ual-hyperv-pc-current",
+      "artifact_type": "other",
+      "artifact_detail": "UAL Current.mdb",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-ual-hyperv-pc-current/Current.mdb",
+        "sha256": "7bb917e47e68592598a91489e4e7dd4e21f53be4fc9f4077e7cf5ac517207de2",
+        "size": 1048576
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/Sample_UAL/HyperV-PC/Current.mdb",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 2,
+        "db_state_name": "DirtyShutdown"
+      },
+      "tags": [
+        "dirty",
+        "go-ese"
+      ],
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'HyperV-PC'."
+    },
+    {
+      "id": "go-ese-ual-hyperv-pc-guid",
+      "artifact_type": "other",
+      "artifact_detail": "UAL {GUID}.mdb (yearly)",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-ual-hyperv-pc-guid/{03A01CC5-91BB-4936-B685-63697785D39E}.mdb",
+        "sha256": "7830377e0931b84da4eba59fc5e06220c96f5c6df56a584e5ea659be0d519d1b",
+        "size": 1048576
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/Sample_UAL/HyperV-PC/{03A01CC5-91BB-4936-B685-63697785D39E}.mdb",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "go-ese"
+      ],
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'HyperV-PC'."
+    },
+    {
+      "id": "go-ese-ual-hyperv-pc-systemidentity",
+      "artifact_type": "other",
+      "artifact_detail": "UAL SystemIdentity.mdb",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-ual-hyperv-pc-systemidentity/SystemIdentity.mdb",
+        "sha256": "ffeb8b2c23eb0eb39483cc92364514b247d9969fd4f592bce0e7d7da152518b3",
+        "size": 1048576
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/Sample_UAL/HyperV-PC/SystemIdentity.mdb",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "go-ese"
+      ],
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'HyperV-PC'."
+    },
+    {
+      "id": "go-ese-ual-nondomain-user-current",
+      "artifact_type": "other",
+      "artifact_detail": "UAL Current.mdb",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-ual-nondomain-user-current/Current.mdb",
+        "sha256": "050ad213047a6aefebdc39dfe7fa501f1cd362cc07f78f22f6b171384458fcdd",
+        "size": 1048576
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/Sample_UAL/Nondomain-User/Current.mdb",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 2,
+        "db_state_name": "DirtyShutdown"
+      },
+      "tags": [
+        "dirty",
+        "go-ese"
+      ],
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'Nondomain-User'."
+    },
+    {
+      "id": "go-ese-ual-nondomain-user-guid",
+      "artifact_type": "other",
+      "artifact_detail": "UAL {GUID}.mdb (yearly)",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-ual-nondomain-user-guid/{03A01CC5-91BB-4936-B685-63697785D39E}.mdb",
+        "sha256": "27c88034309962b49960a22e2b4ef12621bf40df221eec6938ad92fe02ae5cd0",
+        "size": 1048576
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/Sample_UAL/Nondomain-User/{03A01CC5-91BB-4936-B685-63697785D39E}.mdb",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "go-ese"
+      ],
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'Nondomain-User'."
+    },
+    {
+      "id": "go-ese-ual-nondomain-user-systemidentity",
+      "artifact_type": "other",
+      "artifact_detail": "UAL SystemIdentity.mdb",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-ual-nondomain-user-systemidentity/SystemIdentity.mdb",
+        "sha256": "1775730a8410191bfb63fc680eeec2242bbd7b0a0ded291c5ca40a6dab2334b7",
+        "size": 1048576
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/Sample_UAL/Nondomain-User/SystemIdentity.mdb",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x14",
+        "page_size": 4096,
+        "page_size_raw": 4096,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "go-ese"
+      ],
+      "notes": "UAL sample from Windows Server; go-ese testdata/README.md says the UAL samples come from brimorlabs/KStrike (custom licence, all rights reserved). Host 'Nondomain-User'."
+    },
+    {
+      "id": "go-ese-webcache",
+      "artifact_type": "WebCacheV01.dat",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-webcache/WebCacheV01.dat",
+        "sha256": "a44ba234f20eac1a23b64d02a99f67b9bdd3fb2cec008a969bb05e822de17411",
+        "size": 26738688
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/Samples/WebCacheV01.dat",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0xb4",
+        "page_size": 32768,
+        "page_size_raw": 32768,
+        "db_state": 2,
+        "db_state_name": "DirtyShutdown"
+      },
+      "tags": [
+        "dirty",
+        "go-ese"
+      ],
+      "notes": "Dirty shutdown; no .log files shipped. Windows version not documented."
+    },
+    {
+      "id": "go-ese-windows-edb",
+      "artifact_type": "Windows.edb",
+      "redistributable": false,
+      "file": {
+        "path": "files/local/go-ese-windows-edb/Windows.edb",
+        "sha256": "86a5eaf25f321559fb0915be8a7c7c6d9a5f204680c67daa752a2109f44742f7",
+        "size": 50331648
+      },
+      "source": {
+        "name": "Velocidex/go-ese testdata",
+        "url": "https://github.com/Velocidex/go-ese/tree/458e8abf4a573561bb6a31389a9d3a41ea0db68d/testdata",
+        "licence": "Apache-2.0 (repository licence); sample provenance not documented",
+        "terms_url": "https://github.com/Velocidex/go-ese/blob/458e8abf4a573561bb6a31389a9d3a41ea0db68d/LICENSE",
+        "image_name": "Velocidex/go-ese@458e8abf4a573561bb6a31389a9d3a41ea0db68d",
+        "path_in_image": "testdata/Samples/Windows.edb",
+        "retrieved": "2026-11-27"
+      },
+      "header": {
+        "signature_ok": true,
+        "file_type": 0,
+        "format_version": "0x620",
+        "format_revision": "0x6e",
+        "page_size": 32768,
+        "page_size_raw": 32768,
+        "db_state": 3,
+        "db_state_name": "CleanShutdown"
+      },
+      "tags": [
+        "go-ese"
+      ],
+      "notes": "Windows version not documented."
+    }
+  ]
 }
